@@ -1,0 +1,53 @@
+Content developers must consider these different situations during
+page design. While there are several situations to consider, each
+accessible design choice generally benefits several disability groups
+at once and the Web community as a whole. For example, by using style
+sheets to control font styles and eliminating the FONT element, HTML
+authors will have more control over their pages, make those pages more
+accessible to people with low vision, and by sharing the style sheets,
+will often shorten page download times for all users.
+
+The guidelines discuss accessibility issues and provide accessible
+design solutions. They address typical scenarios that may pose problems for users with certain
+disabilities. For example, the first guideline explains how content
+developers can make images accessible. Some users may not be able to
+see images, others may use text-based browsers that do not support images, while others may have turned off support for images . The guidelines do not suggest avoiding
+images as a way to improve accessibility. Instead, they explain that
+providing a text equivalent of the image will make it accessible.
+
+
+Text content can be presented to the user as synthesized speech,
+braille, and visually-displayed text. Each of these three
+mechanisms uses a different sense such as ears for synthesized speech,
+tactile for braille, and eyes for visually-displayed text,
+making the information accessible to groups representing a variety
+of sensory and other disabilities.
+In order to be useful, the text must convey the same function or
+purpose as the image. For example, consider a text equivalent for
+a photographic image of the Earth as seen from outer space. If the
+purpose of the image is mostly that of decoration, then the text
+"Photograph of the Earth as seen from outer space" might fulfill
+the necessary function. If the purpose of the photograph is to
+illustrate specific information about world geography, then the
+text equivalent should convey that information. If the photograph
+has been designed to tell the user to select the image  for information about the earth,
+equivalent textwould be Information about the Earth. Thus, if the text conveys
+the same function or purpose for the user with a disability as the
+image does for other users, then it can be considered a text
+equivalent.
+
+Note that, in addition to benefitting users with disabilities, text
+equivalents can help all users find pages more quickly, since search
+robots can use the text when indexing the pages.
+
+While Web content developers must provide text equivalents for images
+and other multimedia content, it is the responsibility of user agents
+to present the information to the user.
+
+Non-text equivalents of text can make documents accessible to people who may have difficulty accessing
+written text, including many individuals with cognitive disabilities,
+learning disabilities, and deafness. Non-text equivalents of text can
+also be helpful to non-readers. An auditory description is an example
+of a non-text equivalent of visual information. An auditory
+description of a multimedia presentation's visual track benefits
+people who cannot see the visual information.
