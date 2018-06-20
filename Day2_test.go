@@ -27,8 +27,8 @@ func TestWordCount(t *testing.T) {
 		t.Fail()
 	}
 
-	if len(wordList) != 209 {
-		t.Logf("Total number of unique words doesn't match. Expected: 209, actual: <%d>",len(wordList))
+	if len(wordList) != 207 {
+		t.Logf("Total number of unique words doesn't match. Expected: 207, actual: <%d>",len(wordList))
 		t.Fail()
 	}
 	totalWordCount := uint64(0)
