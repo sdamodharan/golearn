@@ -9,7 +9,8 @@ type Validator func(interface{}) (bool, error)
 // NULL corresponds to golang nil
 // INTEGER would be parsed as golang int
 const (
-	NULL DataType = iota
+	ANY DataType = iota
+	NULL
 	INTEGER
 	FLOAT
 	NUMBER
