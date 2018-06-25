@@ -8,9 +8,8 @@ import (
 	"testing"
 )
 
-const testJSON0 = `
-{
-  "field_num": 0.,
+const testJSON0 = `{
+  "field_num": 0.0,
   "field_int": -1,
   "field_float": 0.12,
   "field_string": "its a string",
@@ -18,7 +17,7 @@ const testJSON0 = `
      "subfield_num1": 1,
      "subfield_bool": true
 	},
-  "field_array": ["a",2,false, {}, []]
+  "field_array": ["a",2,false, {}, []],
   "field_bool": false,
   "field_null": null
 }
@@ -26,8 +25,7 @@ const testJSON0 = `
 
 func Test_Required(t *testing.T) {
 	var jsonValue = make(map[string]interface{})
-	json.Unmarshal([]byte(testJSON0), &jsonValue)
-
+	err := json.Unmarshal([]byte(testJSON0), &jsonValue)
 	requiredValidator0 := Validation{
 		FieldName: "field_num",
 		Required:  true,
