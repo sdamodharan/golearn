@@ -261,7 +261,7 @@ func Test_DataTypeObject(t *testing.T) {
 		Required:  true,
 		Type:      OBJECT,
 		CustomValidator: func(i interface{}) (bool, error) {
-			return false, nil
+			return true, nil
 		},
 	}
 	result0, err := requiredValidator0.Apply(jsonValue)
@@ -328,7 +328,7 @@ func Test_DataTypeBoolean(t *testing.T) {
 	json.Unmarshal([]byte(testJSON0), &jsonValue)
 
 	requiredValidator0 := Validation{
-		FieldName: "field_array",
+		FieldName: "field_bool",
 		Required:  true,
 		Type:      BOOLEAN,
 		CustomValidator: func(i interface{}) (bool, error) {
