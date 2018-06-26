@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"math"
 	"reflect"
 	"testing"
 )
@@ -127,10 +128,11 @@ func Test_DataTypeNumber(t *testing.T) {
 		Required:  true,
 		Type:      NUMBER,
 		CustomValidator: func(i interface{}) (bool, error) {
-			if reflect.TypeOf(i).Kind() != reflect.Int {
+
+			if reflect.TypeOf(i).Kind() != reflect.Float64 && !(i.(float64) == math.Trunc(i.(float64))) {
 				return false, errors.New(fmt.Sprintf("Expecting integer data type found %T", i))
 			}
-			value := i.(int)
+			value := math.Trunc(i.(float64))
 			if value < 0 {
 				return true, nil
 			} else {
