@@ -124,7 +124,7 @@ func Test_DataTypeNumber(t *testing.T) {
 	}
 
 	requiredValidator2 := Validation{
-		FieldName: "field_int",
+		FieldName: "field_string",
 		Required:  true,
 		Type:      NUMBER,
 		CustomValidator: func(i interface{}) (bool, error) {
@@ -334,7 +334,7 @@ func Test_DataTypeBoolean(t *testing.T) {
 		Required:  true,
 		Type:      BOOLEAN,
 		CustomValidator: func(i interface{}) (bool, error) {
-			return false, nil
+			return true, nil
 		},
 	}
 	result0, err := requiredValidator0.Apply(jsonValue)
@@ -343,7 +343,7 @@ func Test_DataTypeBoolean(t *testing.T) {
 		t.Fail()
 	}
 	if !result0 {
-		t.Errorf("Validation failed. The array field <field_bool> was present but validation result was false")
+		t.Errorf("Validation failed. The boolean field <field_bool> was present but validation result was false")
 		t.Fail()
 	}
 
