@@ -124,7 +124,7 @@ func Test_DataTypeNumber(t *testing.T) {
 	}
 
 	requiredValidator2 := Validation{
-		FieldName: "field_num",
+		FieldName: "field_int",
 		Required:  true,
 		Type:      NUMBER,
 		CustomValidator: func(i interface{}) (bool, error) {
@@ -132,7 +132,7 @@ func Test_DataTypeNumber(t *testing.T) {
 			if reflect.TypeOf(i).Kind() != reflect.Float64 && !(i.(float64) == math.Trunc(i.(float64))) {
 				return false, errors.New(fmt.Sprintf("Expecting integer data type found %T", i))
 			}
-			value := math.Trunc(i.(float64))
+			value := int(math.Trunc(i.(float64)))
 			if value < 0 {
 				return true, nil
 			} else {
