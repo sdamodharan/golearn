@@ -124,7 +124,7 @@ func Test_DataTypeNumber(t *testing.T) {
 	}
 
 	requiredValidator2 := Validation{
-		FieldName: "field_string",
+		FieldName: "field_int",
 		Required:  true,
 		Type:      NUMBER,
 		CustomValidator: func(i interface{}) (bool, error) {
@@ -206,7 +206,7 @@ func Test_DataTypeFloat(t *testing.T) {
 	}
 
 	requiredValidator1 := Validation{
-		FieldName: "field_int",
+		FieldName: "field_string",
 		Required:  false,
 		Type:      FLOAT,
 	}
